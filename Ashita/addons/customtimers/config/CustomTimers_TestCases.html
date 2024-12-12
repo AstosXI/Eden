@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Timers and Stopwatches Addon - Test Cases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            position: relative;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function copyToClipboard(command, button) {
+            navigator.clipboard.writeText(command).then(() => {
+                // Change button text to show "Copied!"
+                button.innerText = "Copied!";
+                
+                // Reset button text after 2 seconds
+                setTimeout(() => {
+                    button.innerText = "Copy";
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+
+<h1>Custom Timers and Stopwatches Addon - Comprehensive Test Cases</h1>
+<p>This document provides test cases designed to validate the functionality of the custom timers and stopwatches addon. Each command can be tested individually in-game.</p>
+
+<h2>Timer Tests</h2>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start defaulttimer', this)">Copy</button>
+    <code>/tim start defaulttimer</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start CustomBackgroundTimer', this)">Copy</button>
+    <code>/tim start CustomBackgroundTimer</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start CustomPositionTimer 60s 100x 200y', this)">Copy</button>
+    <code>/tim start CustomPositionTimer 60s 100x 200y</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start SilentTimer', this)">Copy</button>
+    <code>/tim start SilentTimer</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start OverwriteTestTimer', this)">Copy</button>
+    <code>/tim start OverwriteTestTimer</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start OverwriteTestTimer', this)">Copy</button>
+    <code>/tim start OverwriteTestTimer</code>
+</div>
+
+<h2>Stopwatch Tests</h2>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw start DefaultStopwatch', this)">Copy</button>
+    <code>/sw start DefaultStopwatch</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw start ColorBackgroundStopwatch', this)">Copy</button>
+    <code>/sw start ColorBackgroundStopwatch</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw start StopwatchFull', this)">Copy</button>
+    <code>/sw start StopwatchFull</code>
+</div>
+
+<h2>Stop and Remove Tests</h2>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start DefaultTimer', this)">Copy</button>
+    <code>/tim start DefaultTimer</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim stop DefaultTimer', this)">Copy</button>
+    <code>/tim stop DefaultTimer</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw start DefaultStopwatch', this)">Copy</button>
+    <code>/sw start DefaultStopwatch</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw stop DefaultStopwatch', this)">Copy</button>
+    <code>/sw stop DefaultStopwatch</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim stop', this)">Copy</button>
+    <code>/tim stop</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw stop', this)">Copy</button>
+    <code>/sw stop</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim kill', this)">Copy</button>
+    <code>/tim kill</code>
+</div>
+
+<h2>Ad-hoc and Miscellaneous Tests</h2>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw start OnTheFlyStopwatch', this)">Copy</button>
+    <code>/sw start OnTheFlyStopwatch</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start OnTheFlyTimer 30s 250x 250y', this)">Copy</button>
+    <code>/tim start OnTheFlyTimer 30s 250x 250y</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim soundtest', this)">Copy</button>
+    <code>/tim soundtest</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim start DisplayTestTimer 10s', this)">Copy</button>
+    <code>/tim start DisplayTestTimer 10s</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/sw start DisplayTestStopwatch', this)">Copy</button>
+    <code>/sw start DisplayTestStopwatch</code>
+</div>
+
+<div class="code-block">
+    <button class="copy-button" onclick="copyToClipboard('/tim colortest', this)">Copy</button>
+    <code>/tim colortest</code>
+</div>
+
+</body>
+</html>

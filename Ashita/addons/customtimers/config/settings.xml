@@ -1,0 +1,173 @@
+<customtimers>
+
+    <!--
+        Default settings for timers and stopwatches. 
+        These values will be used when a specific timer or stopwatch is missing a particular setting.
+    -->
+    <defaults>
+    
+        <!-- Default timer settings -->
+        <timer_defaults>
+            <fontsize>12</fontsize> <!-- Font size for the timer display -->
+            <timer_length>10</timer_length><!-- Default timer duration in seconds if not specified -->
+            <x_position>200</x_position><!-- X and Y position on the screen for displaying timers -->
+            <y_position>200</y_position>
+            <audible_notification>True</audible_notification><!-- Play audible notification when timer ends; set to True or False -->
+            <overwrite_timer>True</overwrite_timer><!-- TRUE: Starting the same timer twice will restart it; FALSE: Prevents duplicate starts. -->
+            <color>7</color> <!-- 1-128 are valid numbers. 1-15 are the ones I recommend. Use '/tim colortest' in-game to see them all. -->
+            <background>regular</background> <!-- Options: light, regular, or dark -->
+        </timer_defaults>
+
+        <!-- Default stopwatch settings -->
+        <stopwatch_defaults>
+            <fontsize>12</fontsize><!-- Font size for the stopwatch display -->
+            <x_position>200</x_position>
+            <y_position>200</y_position>
+            <overwrite_watch>False</overwrite_watch><!-- TRUE: Restart watch if already active; FALSE: Ignore command if already active. -->
+            <color>7</color> <!-- 1-128 are valid numbers. 1-15 are recommended. -->
+            <background>regular</background> <!-- Options: light, regular, or dark -->
+        </stopwatch_defaults>
+
+    </defaults>
+
+    <!--
+        Predefined timers.
+        A variety of timers to test functionality.
+    -->
+    <timers>
+
+        <!-- Timer with all parameters specified -->
+        <timer name="Cor_Roll_1">
+            <fontsize>14</fontsize>
+            <x_position>500</x_position>
+            <y_position>500</y_position>
+            <timer_length>300</timer_length>
+            <color>3</color>
+            <background>dark</background>
+            <audible_notification>True</audible_notification>
+        </timer>
+        <timer name="Cor_Roll_2">
+            <fontsize>14</fontsize>
+            <x_position>2200</x_position>
+            <y_position>225</y_position>
+            <timer_length>300</timer_length>
+            <color>2</color>
+            <background>dark</background>
+            <audible_notification>True</audible_notification>
+        </timer>
+        <timer name="Cor_Roll_3">
+            <fontsize>14</fontsize>
+            <x_position>2200</x_position>
+            <y_position>250</y_position>
+            <timer_length>300</timer_length>
+            <color>3</color>
+            <background>dark</background>
+            <audible_notification>True</audible_notification>
+        </timer>
+        <timer name="Cor_Roll_4">
+            <fontsize>14</fontsize>
+            <x_position>2200</x_position>
+            <y_position>275</y_position>
+            <timer_length>300</timer_length>
+            <color>4</color>
+            <background>dark</background>
+            <audible_notification>True</audible_notification>
+        </timer>
+
+        <!-- Timer with custom position and duration, defaults for color and background -->
+        <timer name="CustomPositionTimer">
+            <x_position>400</x_position>
+            <y_position>300</y_position>
+            <timer_length>45</timer_length>
+        </timer>
+
+        <!-- Timer with a custom color only, no other tags -->
+        <timer name="ColorOnlyTimer">
+            <color>15</color>
+        </timer>
+
+        <!-- Timer without tags, should rely entirely on defaults -->
+        <timer name="DefaultTimer"></timer>
+
+        <!-- Timer with custom font size, position, and background -->
+        <timer name="CustomBackgroundTimer">
+            <fontsize>16</fontsize>
+            <x_position>350</x_position>
+            <y_position>350</y_position>
+            <background>dark</background>
+            <color>15</color>
+        </timer>
+
+        <!-- Timer with audible notification disabled -->
+        <timer name="SilentTimer">
+            <fontsize>12</fontsize>
+            <x_position>150</x_position>
+            <y_position>450</y_position>
+            <timer_length>20</timer_length>
+            <audible_notification>False</audible_notification>
+        </timer>
+
+        <!-- Timer with minimal custom settings -->
+        <timer name="QuickTimer">
+            <timer_length>10</timer_length>
+        </timer>
+
+        <!-- Timer to test overwrite functionality; run twice to confirm behavior -->
+        <timer name="OverwriteTestTimer">
+            <fontsize>12</fontsize>
+            <x_position>250</x_position>
+            <y_position>250</y_position>
+            <timer_length>60</timer_length>
+            <overwrite_timer>False</overwrite_timer>
+        </timer>
+
+    </timers>
+
+    <!--
+        Predefined stopwatches.
+        A variety of stopwatches to test different settings and defaults.
+    -->
+    <stopwatches>
+
+        <!-- Stopwatch with full custom settings -->
+        <stopwatch name="StopwatchFull">
+            <fontsize>16</fontsize>
+            <x_position>150</x_position>
+            <y_position>300</y_position>
+            <color>2</color>
+            <background>dark</background>
+        </stopwatch>
+
+        <!-- Stopwatch with custom color and background, defaults for position -->
+        <stopwatch name="ColorBackgroundStopwatch">
+            <color>9</color>
+            <background>light</background>
+        </stopwatch>
+
+        <!-- Stopwatch without tags, should use all default settings -->
+        <stopwatch name="DefaultStopwatch"/></stopwatch>
+
+        <!-- Stopwatch with a custom font size and position -->
+        <stopwatch name="CustomFontStopwatch">
+            <fontsize>20</fontsize>
+            <x_position>400</x_position>
+            <y_position>200</y_position>
+        </stopwatch>
+
+        <!-- Stopwatch with overwrite enabled; start twice to test behavior -->
+        <stopwatch name="OverwriteEnabledStopwatch">
+            <fontsize>14</fontsize>
+            <x_position>100</x_position>
+            <y_position>150</y_position>
+            <overwrite_watch>True</overwrite_watch>
+        </stopwatch>
+
+        <!-- Stopwatch to test light background option with custom color -->
+        <stopwatch name="LightBackgroundStopwatch">
+            <color>10</color>
+            <background>light</background>
+        </stopwatch>
+
+    </stopwatches>
+
+</customtimers>
