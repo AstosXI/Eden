@@ -39,8 +39,8 @@
         <!-- Timer with all parameters specified -->
         <timer name="Cor_Roll_1">
             <fontsize>14</fontsize>
-            <x_position>500</x_position>
-            <y_position>500</y_position>
+            <x_position>2200</x_position>
+            <y_position>200</y_position>
             <timer_length>300</timer_length>
             <color>3</color>
             <background>dark</background>
