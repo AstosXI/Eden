@@ -1,0 +1,16 @@
+{
+    "font": {
+        "bgcolor": "200,0,0,0",
+        "bgvisible": true,
+        "bold": true,
+        "color": "255,255,255,255",
+        "name": "Arial",
+        "position": [ 130, 0 ],
+        "size": 10
+    },
+    "layout": {
+        "npc": "$target [$position] [ID: $id / Index: $m_index]",
+        "player": "$zone $name  [$level]  [$position] - $ecompass",
+        "target": "$target [ID: $id] [$job / $level / $aggro]  Weak[$weak]  [$position]"
+    }
+}
