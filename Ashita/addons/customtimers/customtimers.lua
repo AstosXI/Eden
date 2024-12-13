@@ -575,6 +575,9 @@ local function stop_all_stopwatches()
     print('\31\200[\31\05' .. _addon.name .. '\31\200] All stopwatches stopped.')
 end
 
+----------------------------------------------------------------------------------------------------
+-- command - Handles incoming commands for timers and stopwatches.
+----------------------------------------------------------------------------------------------------
 ashita.register_event('command', function(command, ntype)
     return safe_call(function()
         local args = command:args()
